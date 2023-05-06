@@ -10,6 +10,7 @@
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
   --filter-bg-color: #deebff;
+  --text-color: black;
 }
 
 .fa-solid {
@@ -19,6 +20,39 @@
 body {
   display: flex;
   justify-content: center;
+}
+
+header {
+  height: 79px;
+}
+
+/* Logo Booki */
+header img {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+/* Header nav */
+header nav {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+}
+
+header li a {
+  text-decoration: none;
+  color: var(--text-color);
+  margin-left: 69px;
+}
+
+header li:hover {
+  color: var(--main-color);
+  text-decoration: overline 2px;
 }
 
 .main-container {
@@ -157,5 +191,10 @@ body {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+  /* ... */
+}
+
+/* Large desktop */
+@media (max-width: 1440px) {
   /* ... */
 }
