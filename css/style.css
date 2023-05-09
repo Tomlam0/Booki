@@ -261,6 +261,13 @@ header ul a:hover::after {
 }
 
 /* Cards Populaire */
+
+/* Liens cards */
+.populaires-cards .card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .card {
   background-color: white;
   border-radius: 20px;
@@ -280,7 +287,13 @@ header ul a:hover::after {
   font-weight: 700;
 }
 
-.neutralStar {
+/* Star rating */
+.fa-star {
+  color: var(--main-color);
+  letter-spacing: -3px;
+}
+
+.neutral-star {
   color: var(--main-bg-color);
 }
 
@@ -312,6 +325,7 @@ header ul a:hover::after {
 
 .populaires-cards .card-subtitle {
   margin: 0;
+  font-size: 14px;
 }
 
 .populaires-cards .card-rating {
