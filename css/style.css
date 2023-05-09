@@ -11,6 +11,8 @@
   --main-bg-color: #f2f2f2;
   --filter-bg-color: #deebff;
   --text-color: black;
+  --button-border-color: #d9d9d9;
+  --button-special-color: #deebff;
 }
 
 body {
@@ -47,6 +49,7 @@ header ul a {
   color: var(--text-color);
   margin-left: 69px;
   position: relative;
+  font-weight: 450;
 }
 
 header ul a:hover {
@@ -88,6 +91,10 @@ header ul a:hover::after {
   font-size: 22px;
 }
 
+.headline p {
+  font-weight: 450;
+}
+
 /*** Form ***/
 .info-group .search-bar {
   height: 49px;
@@ -104,6 +111,11 @@ header ul a:hover::after {
   border-radius: 15px 0px 0px 15px;
 }
 
+/* Icon */
+.fa-location-dot {
+  font-size: 1.2em;
+}
+
 /* Input */
 .info-group .search-bar input {
   width: 196px;
@@ -116,11 +128,11 @@ header ul a:hover::after {
 }
 
 .info-group .search-bar input::placeholder {
-  color: rgb(214, 212, 212);
+  color: var(--button-border-color);
 }
 
 /* Button */
-.info-group button {
+.info-group .search-button {
   width: 132px;
   border: none;
   background-color: var(--main-color);
@@ -137,10 +149,82 @@ header ul a:hover::after {
   display: none;
 }
 
+/*** Filterbar ***/
+
+.filter-bar {
+  display: flex;
+  height: 50px;
+  margin-top: 35px;
+}
+
+.filter-bar p {
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.filter-buttons button {
+  background-color: white;
+  width: auto;
+  padding: 0px 20px 0px 20px;
+  height: 50px;
+  border: 2px solid var(--button-border-color);
+  border-radius: 25px;
+  margin-left: 19px;
+  cursor: pointer;
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.filter-buttons button:hover {
+  background-color: var(--button-special-color);
+  transition: 600ms;
+}
+
+/* Icons */
+.fa-money-bill-wave,
+.fa-person,
+.fa-heart,
+.fa-fire {
+  color: var(--main-color);
+  font-size: 1.2em;
+  padding-right: 10px;
+}
+
+/*** Infobar ***/
+
+.info-bar {
+  display: flex;
+  align-items: baseline;
+  margin-top: 30px;
+}
+
+.info-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--button-border-color);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+
+.fa-info {
+  font-size: 0.7em;
+  color: var(--main-color);
+}
+
+.info-bar p {
+  font-weight: 450;
+  margin-left: 10px;
+}
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
   display: flex;
   justify-content: space-between;
+  margin-top: 45px;
 }
 
 .hebergements-and-populaires section {
