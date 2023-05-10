@@ -326,6 +326,7 @@ header ul a:hover::after {
 
 .populaires-cards .card {
   display: flex;
+  width: 369px;
   background-color: white;
   border-radius: 20px;
   padding: 5px;
