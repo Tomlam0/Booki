@@ -297,7 +297,7 @@ header ul a:hover::after {
 
 .hebergements .more-link:hover {
   color: var(--main-color);
-  transition: 250ms;
+  transition: 200ms;
 }
 
 /*************** Populaires **************/
@@ -398,6 +398,41 @@ header ul a:hover::after {
 .activites-cards .card-title {
   font-size: 16px;
   margin: 20px;
+}
+
+/*******Footer******/
+
+footer nav {
+  display: flex;
+  background-color: var(--main-bg-color);
+}
+
+footer nav ul {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  list-style: none;
+  padding: 0;
+  margin: 20px 20px 5px 20px;
+}
+
+footer nav li {
+  margin-bottom: 15px;
+}
+
+.nav-footer-title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+footer ul a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+footer ul a:hover {
+  color: var(--main-color);
+  transition: 200ms;
 }
 
 /*******GLOBAL******/
