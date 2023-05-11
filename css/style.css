@@ -227,6 +227,8 @@ header ul a:hover {
 
 /****** Hebergements à Marseille***********/
 .hebergements {
+  display: flex;
+  flex-direction: column;
   width: 65%;
 }
 
@@ -235,9 +237,9 @@ header ul a:hover {
 .hebergements-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 30px;
-  gap: 20px;
+  gap: 30px;
 }
 
 .hebergements-cards .card {
@@ -281,7 +283,7 @@ header ul a:hover {
 }
 
 .hebergements .more-link {
-  margin-top: 10px;
+  margin-top: 30px;
   font-weight: 700;
   font-size: 18px;
 }
@@ -311,14 +313,14 @@ header ul a:hover {
 
 .populaires-cards {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+  gap: 30px;
   margin-top: 30px;
 }
 
 .populaires-cards .card {
+  width: 100%;
   display: flex;
-  width: 369px;
   background-color: white;
   border-radius: 20px;
   padding: 5px;
@@ -363,7 +365,8 @@ header ul a:hover {
 
 .activites-cards {
   display: flex;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 30px;
   gap: 30px;
 }
@@ -392,7 +395,7 @@ header ul a:hover {
 
 /*******Footer******/
 
-footer nav {
+.nav-footer {
   display: flex;
   background-color: var(--main-bg-color);
 }
@@ -467,20 +470,31 @@ footer ul a:hover {
 
 /*************** Media queries ***********/
 
-/* Mobile */
+/***** Mobile *****/
 @media (max-width: 768px) {
+  /* Footer */
+  .nav-footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer nav ul {
+    width: 100%;
+  }
 }
 
-/* Tablet */
+/***** Tablet *****/
 @media (max-width: 1024px) {
   .hebergements-and-populaires {
     flex-direction: column;
   }
 
+  /* Hebergements */
   .hebergements {
     width: 100%;
   }
 
+  /* Populaires */
   .populaires {
     width: 100%;
     margin-top: 50px;
@@ -503,16 +517,26 @@ footer ul a:hover {
   .populaires-cards .card-subtitle {
     font-size: 13px;
   }
-}
 
-/* desktop */
-@media (min-width: 1024px) and (max-width: 1440px) {
-  .logo {
-    margin-left: -20px;
+  /* Activités à Marseille */
+  .activites-cards {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
-/* Large desktop */
+/***** Desktop *****/
+@media (max-width: 1440px) {
+  /* Logo */
+  .logo {
+    margin-left: -20px;
+  }
+
+  .activites-cards .card {
+  }
+}
+
+/***** Large desktop *****/
 @media (min-width: 1440.01px) {
   .main-container {
     max-width: 1440.01px;
