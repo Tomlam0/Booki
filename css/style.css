@@ -1,7 +1,6 @@
 /****** General ***********/
 * {
   font-family: "Raleway", sans-serif;
-  /* Ajouté après coup (à supprimer des autres éléments) */
   box-sizing: border-box;
 }
 
@@ -27,7 +26,9 @@ header {
 }
 
 /* Logo Booki */
-header img {
+.logo {
+  width: 61px;
+  height: 19px;
   position: absolute;
   top: 30px;
   left: 30px;
@@ -48,32 +49,19 @@ header ul a {
   text-decoration: none;
   color: var(--text-color);
   margin-left: 69px;
-  position: relative;
   font-weight: 450;
 }
 
 header ul a:hover {
   color: var(--main-color);
-}
-
-header ul a:hover::after {
-  content: "";
-  height: 2px;
-  width: 100%;
-  background-color: var(--main-color);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: -16px;
+  border-top: 2px solid var(--main-color);
+  padding-top: 14px;
 }
 
 /************ Main *************/
 .main-container {
   width: 100%;
-  max-width: 1440px; /*big sreens*/
   padding: 0 50px;
-  box-sizing: border-box;
 }
 
 /********** Trouvez votre hebergement **********/
@@ -231,7 +219,6 @@ header ul a:hover::after {
   background-color: var(--main-bg-color);
   border-radius: 20px;
   padding: 30px;
-  box-sizing: border-box;
 }
 
 /****** Hebergements à Marseille***********/
@@ -366,7 +353,6 @@ header ul a:hover::after {
 .activites {
   margin: 35px 0px 35px 0px;
   padding: 30px;
-  box-sizing: border-box;
 }
 
 /* Cards Activites */
@@ -476,8 +462,12 @@ footer ul a:hover {
 }
 
 /*************** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
 
+/* Mobile */
+@media (max-width: 768px) {
+}
+
+/* Tablet */
 @media (max-width: 1024px) {
   .hebergements-and-populaires {
     flex-direction: column;
@@ -511,12 +501,15 @@ footer ul a:hover {
   }
 }
 
-/* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-  /* ... */
+/* desktop */
+@media (max-width: 1440px) {
 }
 
 /* Large desktop */
-@media (max-width: 1440px) {
-  /* ... */
+@media (min-width: 1440.01px) {
+  .main-container {
+    max-width: 1440.01px;
+  }
+  .logo {
+  }
 }
