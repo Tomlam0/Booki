@@ -607,7 +607,6 @@ footer ul a:hover {
   }
 
   .hebergements-and-populaires {
-    display: flex;
     flex-direction: column-reverse;
   }
 
@@ -620,11 +619,46 @@ footer ul a:hover {
   /* Hebergements */
   .hebergements {
     background-color: transparent;
+    padding-top: 0;
+    padding-bottom: 20px;
+    margin-top: 35px;
+  }
+
+  .hebergements-cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hebergements-cards .card {
+    width: 100%;
+  }
+
+  .hebergements-cards .hotel-du-port {
+    order: 1;
+  }
+
+  .hebergements-cards .auberge-la-canebiere {
+    order: 2;
+  }
+
+  .hebergements-cards .hotel-les-mouettes {
+    order: 3;
+  }
+
+  .hebergements-cards .hotel-de-la-mer {
+    order: 4;
+  }
+
+  .hebergements-cards .auberge-le-panier {
+    order: 5;
+  }
+
+  .hebergements-cards .hotel-chez-amina {
+    order: 6;
   }
 
   /* Activités */
   .activites-cards {
-    display: flex;
     flex-direction: column;
   }
 
