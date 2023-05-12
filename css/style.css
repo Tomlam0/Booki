@@ -492,16 +492,16 @@ footer ul a:hover {
   /*** Filterbar ***/
 
   .filter-bar {
-    /* display: block; */
+    flex-direction: column;
   }
 
   .filter-buttons {
-    /* flex-wrap: wrap;
-    margin: 0; */
+    margin-left: 0;
   }
 
-  .filter-buttons button {
-    /* width: 20%;*/
+  .info-bar {
+    position: relative;
+    top: 47.5px;
   }
 
   /* Hebergements */
@@ -510,6 +510,7 @@ footer ul a:hover {
   }
 
   .hebergements {
+    margin-top: 45px; /* Pour permettre à 'info-bar' de maintenir sa position relative */
     width: 100%;
   }
 
@@ -540,10 +541,6 @@ footer ul a:hover {
 
   .activites-cards img {
     height: 75%;
-  }
-
-  .activites-cards .card-title {
-    margin: ;
   }
 }
 
