@@ -22,7 +22,6 @@ body {
 
 /************ Header *************/
 header {
-  height: 79px;
   display: flex;
 }
 
@@ -70,8 +69,7 @@ header ul a:hover {
 
 /********** Trouvez votre hebergement **********/
 .info-group {
-  height: 281px;
-  margin-top: 35px;
+  margin-top: 60px;
 }
 
 .headline {
@@ -128,17 +126,22 @@ header ul a:hover {
   width: 132px;
   border: none;
   background-color: var(--main-color);
-  color: var(--main-bg-color);
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
   border-radius: 0px 15px 15px 0px;
   cursor: pointer;
 }
 
+.info-group .search-button p {
+  margin: auto;
+  color: var(--main-bg-color);
+  font-weight: 700;
+  font-size: 18px;
+}
+
 .info-group .fa-magnifying-glass {
   display: none;
+  color: var(--main-bg-color);
+  font-size: 1.2em;
+  justify-content: center;
 }
 
 /*** Filterbar ***/
@@ -191,7 +194,6 @@ header ul a:hover {
 /*** Infobar ***/
 .info-bar {
   display: flex;
-  align-items: center;
   margin-top: 37.5px;
 }
 
@@ -211,7 +213,7 @@ header ul a:hover {
 }
 
 .info-bar p {
-  font-weight: 450;
+  display: inline;
   margin: 0;
   margin-left: 10px;
 }
@@ -504,6 +506,11 @@ footer ul a:hover {
 
   .filter-bar {
     flex-direction: column;
+    justify-content: center;
+  }
+
+  .filter-title {
+    margin-top: 35px;
   }
 
   .filter-buttons {
@@ -511,8 +518,7 @@ footer ul a:hover {
   }
 
   .info-bar {
-    position: relative;
-    top: 47.5px;
+    margin-top: 75px;
   }
 
   /* Hebergements */
@@ -522,7 +528,6 @@ footer ul a:hover {
   }
 
   .hebergements {
-    margin-top: 45px; /* Pour permettre à 'info-bar' de maintenir sa position relative */
     width: 100%;
   }
 
@@ -560,7 +565,6 @@ footer ul a:hover {
 @media (min-width: 320px) and (max-width: 768px) {
   .main-container {
     padding: 0;
-    width: 100%;
   }
 
   /* Header */
@@ -570,11 +574,7 @@ footer ul a:hover {
   }
 
   header nav {
-    justify-content: center;
     width: 100%;
-    border-bottom: 2px solid var(--main-bg-color);
-    padding-bottom: 14px;
-    margin-top: 30px;
   }
 
   header ul {
@@ -583,37 +583,95 @@ footer ul a:hover {
     padding: 0;
   }
 
-  header ul li {
-    justify-content: space-between;
-    width: 50%;
-    margin: 0;
-  }
-
   header ul a:hover {
     border-top: none;
+  }
+
+  .hebergements-nav,
+  .activites-nav {
+    width: 50%;
+    text-align: center;
+    border-bottom: 2px solid var(--main-bg-color);
+    padding-bottom: 14px;
+    margin: 0;
+    margin-top: 30px;
+  }
+
+  .hebergements-nav:hover,
+  .activites-nav:hover {
     border-bottom: 2px solid var(--main-color);
     padding-bottom: 14px;
   }
 
   /* Info group */
+  .info-group {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
+  }
+
   .headline h1 {
     line-height: 26px;
+    margin-top: 0;
+  }
+
+  .headline p {
+    margin-bottom: 0;
+  }
+
+  /* Form */
+  .info-group .search-bar {
+    display: flex;
+  }
+
+  .info-group .search-bar input {
+    width: 100%;
+  }
+
+  .info-group .search-button {
+    width: 60px;
+    border-radius: 15px;
+  }
+
+  .info-group .search-button p {
+    display: none;
+  }
+
+  .info-group .fa-magnifying-glass {
+    display: flex;
   }
 
   /*** Filterbar ***/
+  .filter-bar {
+    margin-top: 150px;
+  }
+
+  .filter-title {
+  }
+
   .filter-buttons {
-    flex-wrap: wrap;
-    width: 20%;
+    flex-direction: column;
+  }
+
+  .filter-buttons button {
   }
 
   .hebergements-and-populaires {
     flex-direction: column-reverse;
+    margin-top: 0;
   }
 
   /* Populaires */
   .populaires {
     background-color: var(--main-bg-color);
     border-radius: 0%;
+  }
+
+  .populaires-cards {
+    flex-direction: column;
+    gap: 15px;
   }
 
   /* Hebergements */
@@ -631,6 +689,10 @@ footer ul a:hover {
 
   .hebergements-cards .card {
     width: 100%;
+  }
+
+  .hebergements .more-link {
+    margin-top: 15px;
   }
 
   .hebergements-cards .hotel-du-port {
