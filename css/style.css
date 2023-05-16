@@ -230,9 +230,6 @@ header ul a:hover {
   margin-top: 37.5px;
 }
 
-.hebergements-and-populaires section {
-}
-
 /****** Hebergements à Marseille***********/
 .hebergements {
   background-color: var(--main-bg-color);
@@ -465,6 +462,22 @@ footer ul a:hover {
 }
 
 /* Liens cards*/
+.hebergements .card-link {
+  display: flex;
+  flex-direction: column;
+}
+
+.populaires-cards .card-link {
+  display: flex;
+  width: 100%;
+}
+
+.activites .card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .populaires-cards .card-link,
 .hebergements .card-link,
 .hebergements .more-link,
@@ -473,11 +486,10 @@ footer ul a:hover {
   color: inherit;
 }
 
-.populaires-cards .card-link:hover,
-.hebergements .card-link:hover,
-.hebergements .more-link:hover,
-.activites .card-link:hover {
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.2));
+.populaires-cards .card:hover,
+.hebergements .card:hover,
+.activites .card:hover {
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.3));
   transition: 500ms;
 }
 
