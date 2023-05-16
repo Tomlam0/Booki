@@ -194,6 +194,7 @@ header ul a:hover {
 /*** Infobar ***/
 .info-bar {
   display: flex;
+  align-items: center;
   margin-top: 37.5px;
 }
 
@@ -205,6 +206,7 @@ header ul a:hover {
   border-radius: 50%;
   width: 24px;
   height: 24px;
+  flex-shrink: 0;
 }
 
 .fa-info {
@@ -464,7 +466,6 @@ footer ul a:hover {
 .hebergements .card-link,
 .hebergements .more-link,
 .activites .card-link {
-  display: flex;
   text-decoration: none;
   color: inherit;
 }
@@ -622,8 +623,8 @@ footer ul a:hover {
   }
 
   /* Form */
-  .info-group .search-bar {
-    display: flex;
+  .info-group .search-bar .icon-box {
+    flex-basis: 70px;
   }
 
   .info-group .search-bar input {
@@ -631,7 +632,7 @@ footer ul a:hover {
   }
 
   .info-group .search-button {
-    width: 60px;
+    flex-basis: 70px;
     border-radius: 15px;
   }
 
@@ -645,17 +646,25 @@ footer ul a:hover {
 
   /*** Filterbar ***/
   .filter-bar {
-    margin-top: 150px;
-  }
-
-  .filter-title {
+    display: flex;
+    margin-top: 70px;
   }
 
   .filter-buttons {
-    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
   }
 
   .filter-buttons button {
+    width: 47%;
+    font-size: 14px;
+    text-align: start;
+  }
+
+  .info-bar {
+    padding-top: 30px;
   }
 
   .hebergements-and-populaires {
@@ -667,6 +676,7 @@ footer ul a:hover {
   .populaires {
     background-color: var(--main-bg-color);
     border-radius: 0%;
+    margin-top: 35px;
   }
 
   .populaires-cards {
@@ -739,5 +749,11 @@ footer ul a:hover {
   footer nav ul {
     margin-left: 30px;
     margin-top: 30px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 374.9px) {
+  .filter-buttons button {
+    font-size: 10.5px;
   }
 }
