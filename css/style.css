@@ -133,7 +133,7 @@ header ul a:hover {
   cursor: pointer;
 }
 
-.info-group .search-button p {
+.info-group .search-button .search-text {
   margin: auto;
   color: var(--main-bg-color);
   font-weight: 700;
@@ -655,7 +655,7 @@ footer ul a:hover {
     border-radius: 15px;
   }
 
-  .info-group .search-button p {
+  .info-group .search-button .search-text {
     display: none;
   }
 
