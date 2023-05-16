@@ -87,8 +87,11 @@ header ul a:hover {
 
 /*** Form ***/
 .info-group .search-bar {
+  width: 377px;
   height: 49px;
   display: flex;
+  border: 1px solid var(--main-bg-color);
+  border-radius: 15px;
 }
 
 .info-group .search-bar .icon-box {
@@ -109,8 +112,8 @@ header ul a:hover {
 /* Input */
 .info-group .search-bar input {
   width: 196px;
-  border: 1px solid var(--main-bg-color);
   outline: none;
+  border: none;
   color: var(--text-color);
   text-align: center;
   font-weight: 700;
@@ -623,6 +626,10 @@ footer ul a:hover {
   }
 
   /* Form */
+  .info-group .search-bar {
+    width: 100%;
+  }
+
   .info-group .search-bar .icon-box {
     flex-basis: 70px;
   }
